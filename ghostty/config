@@ -1,0 +1,47 @@
+# Ghostty on macOS, matched to the Omarchy laptop (Tokyo Night, JetBrains Mono).
+# Installed to ~/.config/ghostty/config by bootstrap.sh.
+
+font-family = "JetBrainsMono Nerd Font"
+font-style = Regular
+# Linux uses 8 at the G16's 2x scale; macOS points render larger, so 13 matches.
+font-size = 13
+window-padding-x = 14
+window-padding-y = 14
+window-decoration = none
+macos-titlebar-style = hidden
+confirm-close-surface = false
+resize-overlay = never
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor,ssh-env
+mouse-scroll-multiplier = 0.95
+
+# The physical Super key sends Cmd (see karabiner/), so Super+C/V copy and
+# paste here exactly as Omarchy's universal clipboard does on Linux.
+# Option is the Linux Alt position; make it a real Meta for shells and TUIs.
+macos-option-as-alt = true
+keybind = shift+enter=csi:13;2u
+keybind = alt+shift+enter=csi:13;4u
+
+# Tokyo Night (from ~/.local/state/omarchy/current/theme/ghostty.conf)
+background = #1a1b26
+foreground = #a9b1d6
+cursor-color = #c0caf5
+selection-background = #292e42
+selection-foreground = #c0caf5
+palette = 0=#1a1b26
+palette = 1=#f7768e
+palette = 2=#9ece6a
+palette = 3=#e0af68
+palette = 4=#7aa2f7
+palette = 5=#ad8ee6
+palette = 6=#449dab
+palette = 7=#a9b1d6
+palette = 8=#414868
+palette = 9=#ff7a93
+palette = 10=#b9f27c
+palette = 11=#ff9e64
+palette = 12=#7da6ff
+palette = 13=#bb9af7
+palette = 14=#0db9d7
+palette = 15=#c0caf5

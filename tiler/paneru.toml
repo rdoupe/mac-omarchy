@@ -1,0 +1,26 @@
+# Paneru, used when the Mac can't run OmniWM (needs macOS 26 + Apple Silicon).
+# Installed to ~/.paneru.toml; Paneru reloads it on save.
+# Keys are bound in Karabiner (bin/wm), so [bindings] stays empty.
+
+[options]
+# Omarchy's scrolling layout: two columns per screen (column_width 0.49).
+preset_column_widths = [0.33, 0.49, 0.66, 1.0]
+window_resize_cycle = true
+focus_follows_mouse = true
+mouse_follows_focus = false
+auto_center = false
+
+[padding]
+top = 10
+bottom = 10
+left = 10
+right = 10
+
+[bindings]
+
+# Catch-all rule: new windows open at half width with Omarchy's 5px gap.
+[windows.all]
+title = ".*"
+width = 0.49
+horizontal_padding = 5
+vertical_padding = 5

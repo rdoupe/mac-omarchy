@@ -1,0 +1,52 @@
+SUPER + LEFT                 Focus left window
+SUPER + RIGHT                Focus right window
+SUPER + UP                   Focus window above
+SUPER + DOWN                 Focus window below
+SUPER + SHIFT + LEFT         Swap window left
+SUPER + SHIFT + RIGHT        Swap window right
+SUPER + SHIFT + UP           Swap window up
+SUPER + SHIFT + DOWN         Swap window down
+SUPER + W                    Close window
+SUPER + T                    Toggle floating
+SUPER + F                    Full screen
+SUPER + ALT + F              Full width
+SUPER + CTRL + F             Center column
+SUPER + L                    Toggle workspace layout
+SUPER + S                    Toggle scratchpad
+SUPER + ALT + S              Move window to scratchpad
+SUPER + MINUS                Narrower
+SUPER + EQUAL                Wider
+SUPER + SHIFT + MINUS        Shorter
+SUPER + SHIFT + EQUAL        Taller
+SUPER + ALT + MINUS          Narrower a little
+SUPER + ALT + EQUAL          Wider a little
+SUPER + CTRL + MINUS         Narrower a lot
+SUPER + CTRL + EQUAL         Wider a lot
+SUPER + 1-9                  Workspace 1-9
+SUPER + SHIFT + 1-9          Move window to workspace 1-9
+SUPER + SHIFT + ALT + 1-9    Move window silently to workspace 1-9
+SUPER + TAB                  Next workspace
+SUPER + SHIFT + TAB          Previous workspace
+SUPER + CTRL + TAB           Former workspace
+ALT + TAB                    Next window
+ALT + SHIFT + TAB            Previous window
+CTRL + ALT + TAB             Next monitor
+CTRL + ALT + SHIFT + TAB     Previous monitor
+SUPER + SHIFT + ALT + LEFT   Workspace to left monitor
+SUPER + SHIFT + ALT + RIGHT  Workspace to right monitor
+SUPER + SHIFT + ALT + UP     Workspace to monitor above
+SUPER + SHIFT + ALT + DOWN   Workspace to monitor below
+SUPER + RETURN               Terminal
+SUPER + SHIFT + RETURN       Browser
+SUPER + SHIFT + B            Browser
+SUPER + SHIFT + ALT + B      Browser (private)
+SUPER + SHIFT + F            File manager
+SUPER + SHIFT + N            Editor
+SUPER + CTRL + T             Activity
+SUPER + CTRL + C             Capture menu
+SUPER + CTRL + L             Lock
+SUPER + K                    Keybindings
+
+Super+C/V/X  copy/paste/cut    Super+Space  Spotlight
+Ctrl+F/T/L/S  find/tab/address/save (Linux style; real Ctrl in terminals)
+Ctrl+arrows  word jump        Fn+arrows  Home/End/PgUp/PgDn

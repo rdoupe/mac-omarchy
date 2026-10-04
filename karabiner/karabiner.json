@@ -1,0 +1,2724 @@
+{
+  "global": {
+    "show_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "name": "Omarchy",
+      "selected": true,
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Omarchy: SUPER + LEFT - Focus left window",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" focus left"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + RIGHT - Focus right window",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" focus right"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + UP - Focus window above",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" focus up"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + DOWN - Focus window below",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" focus down"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + LEFT - Swap window left",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" swap left"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + RIGHT - Swap window right",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" swap right"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + UP - Swap window up",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" swap up"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + DOWN - Swap window down",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" swap down"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + W - Close window",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" close"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + T - Toggle floating",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" float"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + F - Full screen",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" fullscreen"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + ALT + F - Full width",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" maximize"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + CTRL + F - Center column",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" center"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" center"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + L - Toggle workspace layout",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" layout"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + S - Toggle scratchpad",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" scratchpad"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + ALT + S - Move window to scratchpad",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" scratchpad-move"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + MINUS - Narrower",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width -100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + EQUAL - Wider",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width +100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + MINUS - Shorter",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize height -100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + EQUAL - Taller",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize height +100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + ALT + MINUS - Narrower a little",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width -25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + ALT + EQUAL - Wider a little",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width +25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + CTRL + MINUS - Narrower a lot",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width -300"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width -300"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + CTRL + EQUAL - Wider a lot",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width +300"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" resize width +300"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 1 - Workspace 1",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "1",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 2 - Workspace 2",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 3 - Workspace 3",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 4 - Workspace 4",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 5 - Workspace 5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 6 - Workspace 6",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "6",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 7 - Workspace 7",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "7",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 8 - Workspace 8",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "8",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + 9 - Workspace 9",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace 9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 1 - Move window to workspace 1",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "1",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 2 - Move window to workspace 2",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 3 - Move window to workspace 3",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 4 - Move window to workspace 4",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 5 - Move window to workspace 5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 6 - Move window to workspace 6",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "6",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 7 - Move window to workspace 7",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "7",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 8 - Move window to workspace 8",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "8",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + 9 - Move window to workspace 9",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to 9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 1 - Move window silently to workspace 1",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "1",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 2 - Move window silently to workspace 2",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 3 - Move window silently to workspace 3",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 4 - Move window silently to workspace 4",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 5 - Move window silently to workspace 5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 6 - Move window silently to workspace 6",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "6",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 7 - Move window silently to workspace 7",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "7",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 8 - Move window silently to workspace 8",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "8",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + 9 - Move window silently to workspace 9",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" move-to-silent 9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + TAB - Next workspace",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace next"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + TAB - Previous workspace",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace prev"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + CTRL + TAB - Former workspace",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace last"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace last"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: ALT + TAB - Next window",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" window next"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: ALT + SHIFT + TAB - Previous window",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" window prev"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: CTRL + ALT + TAB - Next monitor",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" monitor next"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" monitor next"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: CTRL + ALT + SHIFT + TAB - Previous monitor",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "shift",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" monitor prev"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "shift",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" monitor prev"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + LEFT - Workspace to left monitor",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace-to left"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + RIGHT - Workspace to right monitor",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace-to right"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + UP - Workspace to monitor above",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace-to up"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + DOWN - Workspace to monitor below",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" workspace-to down"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + RETURN - Terminal",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" terminal"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + RETURN - Browser",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -na 'Google Chrome' --args --new-window"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + B - Browser",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -na 'Google Chrome' --args --new-window"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + ALT + B - Browser (private)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift",
+                      "left_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -na 'Google Chrome' --args --incognito"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + F - File manager",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open ~"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + SHIFT + N - Editor",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -na 'Ghostty' --args -e nvim"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + CTRL + T - Activity",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -na 'Ghostty' --args -e btop"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -na 'Ghostty' --args -e btop"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + CTRL + C - Capture menu",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a Screenshot"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a Screenshot"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + CTRL + L - Lock",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "q",
+                    "modifiers": [
+                      "left_control",
+                      "left_command"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "q",
+                    "modifiers": [
+                      "left_control",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Omarchy: SUPER + K - Keybindings",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "\"$HOME/.local/bin/wm\" keybindings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Linux text editing: Ctrl+arrows/Backspace, Home/End",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_forward",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "home",
+                    "modifiers": []
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "end",
+                    "modifiers": []
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_up",
+                    "modifiers": []
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_down",
+                    "modifiers": []
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_up",
+                    "modifiers": []
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_down",
+                    "modifiers": []
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "home",
+                  "modifiers": {
+                    "mandatory": [],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "end",
+                  "modifiers": {
+                    "mandatory": [],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Linux key positions: [fn][control][option][command] -> Ctrl Fn Super Alt",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "fn",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_command"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "is_built_in_keyboard": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "fn",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "is_built_in_keyboard": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_control",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "fn"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "is_built_in_keyboard": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_command"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "is_built_in_keyboard": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_command",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_option"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "is_built_in_keyboard": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "PC keyboard: Ctrl is the app-shortcut key outside terminals",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_control",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_command"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      {
+                        "is_built_in_keyboard": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.mitchellh\\.ghostty$",
+                      "^com\\.apple\\.Terminal$",
+                      "^com\\.googlecode\\.iterm2$",
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^org\\.alacritty$",
+                      "^dev\\.warp\\.Warp"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+#!/bin/bash
+# One verb set for Omarchy-style window actions, dispatched to whichever
+# scrolling tiler is installed (OmniWM preferred, Paneru otherwise).
+# Karabiner runs this for every Super chord; see karabiner/generate.py.
+export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.cargo/bin:$PATH"
+
+verb=$1
+shift
+
+close_front_window() {
+  osascript -e 'tell application "System Events" to tell (first process whose frontmost is true) to click (first button of front window whose subrole is "AXCloseButton")' >/dev/null 2>&1
+}
+
+case $verb in
+  keybindings)
+    exec open -na Ghostty --args -e less "$HOME/.config/mac-omarchy/keybindings.txt" ;;
+  terminal) # new window in the running Ghostty, not a second Ghostty instance
+    if pgrep -xq ghostty; then
+      exec osascript -e 'tell application "Ghostty" to activate' \
+        -e 'tell application "System Events" to keystroke "n" using command down'
+    fi
+    exec open -a Ghostty ;;
+esac
+
+if command -v omniwmctl >/dev/null; then
+  o() { omniwmctl command "$@"; }
+  case $verb in
+    focus) o focus "$1" ;;
+    swap) o move "$1" ;;
+    close) o close-focused-window ;;
+    float) o toggle-focused-window-floating ;;
+    fullscreen) o toggle-fullscreen ;;
+    maximize) o toggle-container-full-primary-span ;;
+    center) o center-column ;;
+    layout) o toggle-workspace-layout ;;
+    scratchpad) o scratchpad toggle 1 ;;
+    scratchpad-move) o scratchpad assign 1 ;;
+    resize)
+      if [[ $1 == width ]]; then
+        o set-container-primary-span "$2"
+      else # height: Omarchy's 100px steps become 10% of the column
+        o set-window-secondary-span "${2:0:1}$((${2:1} / 10))%"
+      fi
+      ;;
+    workspace)
+      case $1 in
+        next) o switch-workspace next ;;
+        prev) o switch-workspace prev ;;
+        last) o switch-workspace back-and-forth ;;
+        *) o switch-workspace "$1" ;;
+      esac
+      ;;
+    move-to) o move-to-workspace "$1" && o switch-workspace "$1" ;;
+    move-to-silent) o move-to-workspace "$1" ;;
+    window) o focus previous ;;
+    monitor) o focus-monitor "$1" ;;
+    workspace-to) o swap-workspace-with-monitor "$1" ;;
+    *) echo "wm: unknown verb '$verb'" >&2; exit 3 ;;
+  esac
+elif command -v paneru >/dev/null; then
+  p() { paneru send-cmd window "$@"; }
+  dir() { case $1 in left) echo west ;; right) echo east ;; up) echo north ;; down) echo south ;; esac; }
+  case $verb in
+    focus) p focus "$(dir "$1")" ;;
+    swap) p swap "$(dir "$1")" ;;
+    close) close_front_window ;;
+    float) p manage ;;
+    fullscreen | maximize) p fullwidth ;; # Paneru has no fullscreen
+    center) p center ;;
+    layout) p stack ;;
+    scratchpad | scratchpad-move) ;; # not supported by Paneru
+    resize)
+      if [[ $1 == width ]]; then
+        [[ $2 == -* ]] && p shrink || p grow
+      else
+        [[ $2 == -* ]] && p vertical shrink || p vertical grow
+      fi
+      ;;
+    workspace)
+      case $1 in
+        next) p virtual south ;;
+        prev) p virtual north ;;
+        last) ;; # no back-and-forth in Paneru
+        *) p virtualnum "$1" ;;
+      esac
+      ;;
+    move-to) p virtualmovenum "$1" ;;
+    move-to-silent) p virtualsendnum "$1" ;;
+    window) [[ $1 == prev ]] && p focus west || p focus east ;;
+    monitor) paneru send-cmd mouse nextdisplay ;; # focus follows the pointer
+    workspace-to) p nextdisplaysend ;;
+    *) echo "wm: unknown verb '$verb'" >&2; exit 3 ;;
+  esac
+else
+  echo "wm: neither omniwmctl nor paneru is installed" >&2
+  exit 2
+fi
