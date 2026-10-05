@@ -4,7 +4,7 @@ Make a MacBook work like the Omarchy laptop: Linux key positions, Omarchy's
 Super shortcuts, and a scrolling tiling layout. No SIP changes.
 
 ```bash
-git clone <this repo> ~/mac-omarchy && ~/mac-omarchy/bootstrap.sh
+git clone https://github.com/rdoupe/mac-omarchy ~/mac-omarchy && ~/mac-omarchy/bootstrap.sh
 ```
 
 Run it again after OmniWM's first launch; it then configures OmniWM. The
