@@ -1,11 +1,13 @@
 # mac-omarchy
 
-Make a MacBook work like the Omarchy laptop: Linux key positions, Omarchy's
+Make a MacBook work like an Omarchy machine: Linux key positions, Omarchy's
 Super shortcuts, and a scrolling tiling layout. No SIP changes.
 
 ```bash
 git clone https://github.com/rdoupe/mac-omarchy ~/mac-omarchy && ~/mac-omarchy/bootstrap.sh
 ```
+
+Why it works this way, and what it trades off: [DESIGN.md](DESIGN.md).
 
 Run it again after OmniWM's first launch; it then configures OmniWM. The
 script ends with the permission prompts you have to click through yourself.
@@ -31,7 +33,7 @@ script ends with the permission prompts you have to click through yourself.
 | `karabiner/generate.py` | The bindings table. Edit it, run it, and it writes `karabiner.json` and `keybindings.txt`. |
 | `bin/wm` | One verb set (`wm focus left`, `wm workspace 3`, ...) for OmniWM or Paneru. |
 | `tiler/paneru.toml` | Paneru config, used when the Mac can't run OmniWM. |
-| `ghostty/config` | Ghostty matched to the laptop. |
+| `ghostty/config` | Ghostty with Omarchy's default look (Tokyo Night, JetBrains Mono). |
 
 **Tiler:** OmniWM on macOS 26+ with Apple Silicon, otherwise Paneru. Paneru has no
 fullscreen (Super+F becomes full width), no scratchpad and no former-workspace

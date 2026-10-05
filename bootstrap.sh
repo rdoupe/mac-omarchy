@@ -1,5 +1,5 @@
 #!/bin/bash
-# Make this Mac work like the Omarchy laptop: Linux key positions, Omarchy
+# Make this Mac work like an Omarchy machine: Linux key positions, Omarchy
 # shortcuts, scrolling tiling. Safe to re-run. Anything replaced is backed up
 # as <file>.bak.<timestamp>.
 set -euo pipefail

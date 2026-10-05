@@ -1,9 +1,9 @@
-# Ghostty on macOS, matched to the Omarchy laptop (Tokyo Night, JetBrains Mono).
+# Ghostty on macOS with Omarchy's default look (Tokyo Night, JetBrains Mono).
 # Installed to ~/.config/ghostty/config by bootstrap.sh.
 
 font-family = "JetBrainsMono Nerd Font"
 font-style = Regular
-# Linux uses 8 at the G16's 2x scale; macOS points render larger, so 13 matches.
+# Roughly the size of Omarchy's terminal on a 2x Linux display; adjust to taste.
 font-size = 13
 window-padding-x = 14
 window-padding-y = 14
@@ -23,7 +23,7 @@ macos-option-as-alt = true
 keybind = shift+enter=csi:13;2u
 keybind = alt+shift+enter=csi:13;4u
 
-# Tokyo Night (from ~/.local/state/omarchy/current/theme/ghostty.conf)
+# Tokyo Night, as shipped by Omarchy
 background = #1a1b26
 foreground = #a9b1d6
 cursor-color = #c0caf5
